@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.github.aaric.achieve.protobuf";
+option java_outer_classname = "DeptProto";
+
+message Dept {
+    int32 id = 1;
+    string name = 2;
+}
