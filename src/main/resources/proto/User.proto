@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protobuf;
+
+option java_package = "com.github.aaric.achieve.protobuf";
+option java_outer_classname = "UserProto";
+
+import public "google/protobuf/timestamp.proto";
+import "Dept.proto";
+
+message User {
+    int32 id = 1;
+    string username = 2;
+    string password = 3;
+    bool status = 4;
+    repeated Dept depts = 5;
+    google.protobuf.Timestamp lastLoginTime = 6;
+}
