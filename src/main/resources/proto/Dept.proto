@@ -9,3 +9,7 @@ message Dept {
     int32 id = 1;
     string name = 2;
 }
+
+message DeptList {
+    repeated Dept dept = 1;
+}

@@ -18,25 +18,28 @@ public class ProtobufTest {
 
     @Test
     public void testToByteArray() {
-        DeptProto.Dept.Builder dept1 = DeptProto.Dept.newBuilder();
-        dept1.setId(1);
-        dept1.setName("dept1");
-        DeptProto.Dept.Builder dept2 = DeptProto.Dept.newBuilder();
-        dept2.setId(2);
-        dept2.setName("dept2");
-        UserProto.User.Builder user = UserProto.User.newBuilder();
-        user.setId(1);
-        user.setUsername("Nick");
-        user.setPassword("123456");
-        user.addDepts(dept1);
-        user.addDepts(dept2);
+        DeptProto.Dept dept1 = DeptProto.Dept.newBuilder()
+                .setId(1)
+                .setName("dept1")
+                .build();
+        DeptProto.Dept dept2 = DeptProto.Dept.newBuilder()
+                .setId(2)
+                .setName("dept2")
+                .build();
         long millis = Calendar.getInstance().getTimeInMillis();
         Timestamp.Builder current = Timestamp.newBuilder()
                 .setSeconds(millis / 1000)
                 .setNanos((int) ((millis % 1000) * 1000000));
-        user.setLastLoginTime(current);
+        UserProto.User user = UserProto.User.newBuilder()
+                .setId(1)
+                .setUsername("Nick")
+                .setPassword("123456")
+                .addDepts(dept1)
+                .addDepts(dept2)
+                .setLastLoginTime(current)
+                .build();
         System.out.println(user);
-        byte[] userBytes = user.build().toByteArray();
+        byte[] userBytes = user.toByteArray();
         System.out.println(DatatypeConverter.printHexBinary(userBytes));
         Assert.assertNotNull(userBytes);
     }

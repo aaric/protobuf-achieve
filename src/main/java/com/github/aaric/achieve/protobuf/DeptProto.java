@@ -602,11 +602,773 @@ public final class DeptProto {
 
   }
 
+  public interface DeptListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:protobuf.DeptList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    java.util.List<com.github.aaric.achieve.protobuf.DeptProto.Dept> 
+        getDeptList();
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    com.github.aaric.achieve.protobuf.DeptProto.Dept getDept(int index);
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    int getDeptCount();
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    java.util.List<? extends com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder> 
+        getDeptOrBuilderList();
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder getDeptOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code protobuf.DeptList}
+   */
+  public  static final class DeptList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:protobuf.DeptList)
+      DeptListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DeptList.newBuilder() to construct.
+    private DeptList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DeptList() {
+      dept_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DeptList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownFieldProto3(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                dept_ = new java.util.ArrayList<com.github.aaric.achieve.protobuf.DeptProto.Dept>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              dept_.add(
+                  input.readMessage(com.github.aaric.achieve.protobuf.DeptProto.Dept.parser(), extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          dept_ = java.util.Collections.unmodifiableList(dept_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.github.aaric.achieve.protobuf.DeptProto.internal_static_protobuf_DeptList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.github.aaric.achieve.protobuf.DeptProto.internal_static_protobuf_DeptList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.github.aaric.achieve.protobuf.DeptProto.DeptList.class, com.github.aaric.achieve.protobuf.DeptProto.DeptList.Builder.class);
+    }
+
+    public static final int DEPT_FIELD_NUMBER = 1;
+    private java.util.List<com.github.aaric.achieve.protobuf.DeptProto.Dept> dept_;
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    public java.util.List<com.github.aaric.achieve.protobuf.DeptProto.Dept> getDeptList() {
+      return dept_;
+    }
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    public java.util.List<? extends com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder> 
+        getDeptOrBuilderList() {
+      return dept_;
+    }
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    public int getDeptCount() {
+      return dept_.size();
+    }
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    public com.github.aaric.achieve.protobuf.DeptProto.Dept getDept(int index) {
+      return dept_.get(index);
+    }
+    /**
+     * <code>repeated .protobuf.Dept dept = 1;</code>
+     */
+    public com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder getDeptOrBuilder(
+        int index) {
+      return dept_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < dept_.size(); i++) {
+        output.writeMessage(1, dept_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < dept_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, dept_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.github.aaric.achieve.protobuf.DeptProto.DeptList)) {
+        return super.equals(obj);
+      }
+      com.github.aaric.achieve.protobuf.DeptProto.DeptList other = (com.github.aaric.achieve.protobuf.DeptProto.DeptList) obj;
+
+      boolean result = true;
+      result = result && getDeptList()
+          .equals(other.getDeptList());
+      result = result && unknownFields.equals(other.unknownFields);
+      return result;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getDeptCount() > 0) {
+        hash = (37 * hash) + DEPT_FIELD_NUMBER;
+        hash = (53 * hash) + getDeptList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.github.aaric.achieve.protobuf.DeptProto.DeptList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code protobuf.DeptList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:protobuf.DeptList)
+        com.github.aaric.achieve.protobuf.DeptProto.DeptListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.github.aaric.achieve.protobuf.DeptProto.internal_static_protobuf_DeptList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.github.aaric.achieve.protobuf.DeptProto.internal_static_protobuf_DeptList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.github.aaric.achieve.protobuf.DeptProto.DeptList.class, com.github.aaric.achieve.protobuf.DeptProto.DeptList.Builder.class);
+      }
+
+      // Construct using com.github.aaric.achieve.protobuf.DeptProto.DeptList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getDeptFieldBuilder();
+        }
+      }
+      public Builder clear() {
+        super.clear();
+        if (deptBuilder_ == null) {
+          dept_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          deptBuilder_.clear();
+        }
+        return this;
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.github.aaric.achieve.protobuf.DeptProto.internal_static_protobuf_DeptList_descriptor;
+      }
+
+      public com.github.aaric.achieve.protobuf.DeptProto.DeptList getDefaultInstanceForType() {
+        return com.github.aaric.achieve.protobuf.DeptProto.DeptList.getDefaultInstance();
+      }
+
+      public com.github.aaric.achieve.protobuf.DeptProto.DeptList build() {
+        com.github.aaric.achieve.protobuf.DeptProto.DeptList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public com.github.aaric.achieve.protobuf.DeptProto.DeptList buildPartial() {
+        com.github.aaric.achieve.protobuf.DeptProto.DeptList result = new com.github.aaric.achieve.protobuf.DeptProto.DeptList(this);
+        int from_bitField0_ = bitField0_;
+        if (deptBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            dept_ = java.util.Collections.unmodifiableList(dept_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.dept_ = dept_;
+        } else {
+          result.dept_ = deptBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder clone() {
+        return (Builder) super.clone();
+      }
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.setField(field, value);
+      }
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return (Builder) super.clearField(field);
+      }
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return (Builder) super.clearOneof(oneof);
+      }
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return (Builder) super.setRepeatedField(field, index, value);
+      }
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return (Builder) super.addRepeatedField(field, value);
+      }
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.github.aaric.achieve.protobuf.DeptProto.DeptList) {
+          return mergeFrom((com.github.aaric.achieve.protobuf.DeptProto.DeptList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.github.aaric.achieve.protobuf.DeptProto.DeptList other) {
+        if (other == com.github.aaric.achieve.protobuf.DeptProto.DeptList.getDefaultInstance()) return this;
+        if (deptBuilder_ == null) {
+          if (!other.dept_.isEmpty()) {
+            if (dept_.isEmpty()) {
+              dept_ = other.dept_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureDeptIsMutable();
+              dept_.addAll(other.dept_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.dept_.isEmpty()) {
+            if (deptBuilder_.isEmpty()) {
+              deptBuilder_.dispose();
+              deptBuilder_ = null;
+              dept_ = other.dept_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              deptBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getDeptFieldBuilder() : null;
+            } else {
+              deptBuilder_.addAllMessages(other.dept_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.github.aaric.achieve.protobuf.DeptProto.DeptList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.github.aaric.achieve.protobuf.DeptProto.DeptList) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.github.aaric.achieve.protobuf.DeptProto.Dept> dept_ =
+        java.util.Collections.emptyList();
+      private void ensureDeptIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          dept_ = new java.util.ArrayList<com.github.aaric.achieve.protobuf.DeptProto.Dept>(dept_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.github.aaric.achieve.protobuf.DeptProto.Dept, com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder, com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder> deptBuilder_;
+
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public java.util.List<com.github.aaric.achieve.protobuf.DeptProto.Dept> getDeptList() {
+        if (deptBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(dept_);
+        } else {
+          return deptBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public int getDeptCount() {
+        if (deptBuilder_ == null) {
+          return dept_.size();
+        } else {
+          return deptBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public com.github.aaric.achieve.protobuf.DeptProto.Dept getDept(int index) {
+        if (deptBuilder_ == null) {
+          return dept_.get(index);
+        } else {
+          return deptBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder setDept(
+          int index, com.github.aaric.achieve.protobuf.DeptProto.Dept value) {
+        if (deptBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeptIsMutable();
+          dept_.set(index, value);
+          onChanged();
+        } else {
+          deptBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder setDept(
+          int index, com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder builderForValue) {
+        if (deptBuilder_ == null) {
+          ensureDeptIsMutable();
+          dept_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          deptBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder addDept(com.github.aaric.achieve.protobuf.DeptProto.Dept value) {
+        if (deptBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeptIsMutable();
+          dept_.add(value);
+          onChanged();
+        } else {
+          deptBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder addDept(
+          int index, com.github.aaric.achieve.protobuf.DeptProto.Dept value) {
+        if (deptBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureDeptIsMutable();
+          dept_.add(index, value);
+          onChanged();
+        } else {
+          deptBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder addDept(
+          com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder builderForValue) {
+        if (deptBuilder_ == null) {
+          ensureDeptIsMutable();
+          dept_.add(builderForValue.build());
+          onChanged();
+        } else {
+          deptBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder addDept(
+          int index, com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder builderForValue) {
+        if (deptBuilder_ == null) {
+          ensureDeptIsMutable();
+          dept_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          deptBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder addAllDept(
+          java.lang.Iterable<? extends com.github.aaric.achieve.protobuf.DeptProto.Dept> values) {
+        if (deptBuilder_ == null) {
+          ensureDeptIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, dept_);
+          onChanged();
+        } else {
+          deptBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder clearDept() {
+        if (deptBuilder_ == null) {
+          dept_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          deptBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public Builder removeDept(int index) {
+        if (deptBuilder_ == null) {
+          ensureDeptIsMutable();
+          dept_.remove(index);
+          onChanged();
+        } else {
+          deptBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder getDeptBuilder(
+          int index) {
+        return getDeptFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder getDeptOrBuilder(
+          int index) {
+        if (deptBuilder_ == null) {
+          return dept_.get(index);  } else {
+          return deptBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public java.util.List<? extends com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder> 
+           getDeptOrBuilderList() {
+        if (deptBuilder_ != null) {
+          return deptBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(dept_);
+        }
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder addDeptBuilder() {
+        return getDeptFieldBuilder().addBuilder(
+            com.github.aaric.achieve.protobuf.DeptProto.Dept.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder addDeptBuilder(
+          int index) {
+        return getDeptFieldBuilder().addBuilder(
+            index, com.github.aaric.achieve.protobuf.DeptProto.Dept.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .protobuf.Dept dept = 1;</code>
+       */
+      public java.util.List<com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder> 
+           getDeptBuilderList() {
+        return getDeptFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.github.aaric.achieve.protobuf.DeptProto.Dept, com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder, com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder> 
+          getDeptFieldBuilder() {
+        if (deptBuilder_ == null) {
+          deptBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.github.aaric.achieve.protobuf.DeptProto.Dept, com.github.aaric.achieve.protobuf.DeptProto.Dept.Builder, com.github.aaric.achieve.protobuf.DeptProto.DeptOrBuilder>(
+                  dept_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          dept_ = null;
+        }
+        return deptBuilder_;
+      }
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFieldsProto3(unknownFields);
+      }
+
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:protobuf.DeptList)
+    }
+
+    // @@protoc_insertion_point(class_scope:protobuf.DeptList)
+    private static final com.github.aaric.achieve.protobuf.DeptProto.DeptList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.github.aaric.achieve.protobuf.DeptProto.DeptList();
+    }
+
+    public static com.github.aaric.achieve.protobuf.DeptProto.DeptList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DeptList>
+        PARSER = new com.google.protobuf.AbstractParser<DeptList>() {
+      public DeptList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DeptList(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DeptList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DeptList> getParserForType() {
+      return PARSER;
+    }
+
+    public com.github.aaric.achieve.protobuf.DeptProto.DeptList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_protobuf_Dept_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protobuf_Dept_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protobuf_DeptList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protobuf_DeptList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -617,8 +1379,9 @@ public final class DeptProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\nDept.proto\022\010protobuf\" \n\004Dept\022\n\n\002id\030\001 \001" +
-      "(\005\022\014\n\004name\030\002 \001(\tB.\n!com.github.aaric.ach" +
-      "ieve.protobufB\tDeptProtob\006proto3"
+      "(\005\022\014\n\004name\030\002 \001(\t\"(\n\010DeptList\022\034\n\004dept\030\001 \003" +
+      "(\0132\016.protobuf.DeptB.\n!com.github.aaric.a" +
+      "chieve.protobufB\tDeptProtob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -638,6 +1401,12 @@ public final class DeptProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protobuf_Dept_descriptor,
         new java.lang.String[] { "Id", "Name", });
+    internal_static_protobuf_DeptList_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_protobuf_DeptList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protobuf_DeptList_descriptor,
+        new java.lang.String[] { "Dept", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
