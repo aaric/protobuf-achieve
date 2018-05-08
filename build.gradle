@@ -1,5 +1,5 @@
 group 'com.github.aaric'
-version '0.2.0-SNAPSHOT'
+version '0.3.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'maven'
@@ -18,7 +18,10 @@ dependencies {
     compile("org.slf4j:slf4j-api:1.7.+")
 
     compile("org.apache.commons:commons-lang3:3.+")
+
     compile("com.google.protobuf:protobuf-java:3.5.1")
+    compile("io.protostuff:protostuff-core:1.6.+")
+    compile("io.protostuff:protostuff-runtime:1.6.+")
 
     compile("com.google.code.gson:gson:2.8.4")
     compile("com.alibaba:fastjson:1.2.47")
