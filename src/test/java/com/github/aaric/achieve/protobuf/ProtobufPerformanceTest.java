@@ -38,34 +38,30 @@ public class ProtobufPerformanceTest {
         start = Calendar.getInstance().getTimeInMillis();
         DeptProto.DeptList deptList = DeptProto.DeptList.parseFrom(deptListBytes);
         //System.out.println(deptList.getDeptList().size());
-        System.out.println(String.format("1.protobuf: %d", Calendar.getInstance().getTimeInMillis() - start));
+        System.out.println(String.format("1.protobuf: %d, %dByte", Calendar.getInstance().getTimeInMillis() - start, deptListBytes.length));
+
+        // json
+        String result1, result2;
+        List<DeptEntity> deptEntityList = new ArrayList<>();
+        for (int i = 1; i <= count; i++) {
+            deptEntityList.add(new DeptEntity(i, MessageFormat.format("dept{0,number,000000}", i)));
+        }
+        result1 = new Gson().toJson(deptEntityList);
+        result2 = JSON.toJSONString(deptEntityList);
 
         // 2.gson
-        String result1;
-        List<DeptEntity> deptEntityList1_1 = new ArrayList<>();
-        for (int i = 1; i <= count; i++) {
-            deptEntityList1_1.add(new DeptEntity(i, MessageFormat.format("dept{0,number,000000}", i)));
-        }
-        result1 = new Gson().toJson(deptEntityList1_1);
         start = Calendar.getInstance().getTimeInMillis();
-        List<DeptEntity> deptEntityList1_2 = new Gson().fromJson(result1, new TypeToken<List<DeptEntity>>() {
+        List<DeptEntity> deptEntityList1 = new Gson().fromJson(result1, new TypeToken<List<DeptEntity>>() {
         }.getType());
-        //System.out.println(deptEntityList1_2.size());
-        System.out.println(String.format("2.gson: %d", Calendar.getInstance().getTimeInMillis() - start));
-
+        //System.out.println(deptEntityList1.size());
+        System.out.println(String.format("2.gson: %d, %dByte", Calendar.getInstance().getTimeInMillis() - start, result1.getBytes().length));
 
         // 3.fastjson
-        String result2;
-        List<DeptEntity> deptEntityList2_1 = new ArrayList<>();
-        for (int i = 1; i <= count; i++) {
-            deptEntityList2_1.add(new DeptEntity(i, MessageFormat.format("dept{0,number,000000}", i)));
-        }
-        result2 = JSON.toJSONString(deptEntityList2_1);
         start = Calendar.getInstance().getTimeInMillis();
-        List<DeptEntity> deptEntityList2_2 = JSON.parseObject(result2, new TypeReference<List<DeptEntity>>() {
+        List<DeptEntity> deptEntityList2 = JSON.parseObject(result2, new TypeReference<List<DeptEntity>>() {
         }.getType());
-        //System.out.println(deptEntityList2_2.size());
-        System.out.println(String.format("3.fastjson: %d", Calendar.getInstance().getTimeInMillis() - start));
+        //System.out.println(deptEntityList2.size());
+        System.out.println(String.format("3.fastjson: %d, %dByte", Calendar.getInstance().getTimeInMillis() - start, result2.getBytes().length));
 
         // performance:
         // protobuf > gson > fastjson
